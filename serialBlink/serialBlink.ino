@@ -10,7 +10,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   if (Serial.readString() == "On") {
-    digitalWrite(!3, HIGH);
+    digitalWrite(13, HIGH);
   }
   else if (Serial.readString() == "Off") {
     digitalWrite(13, LOW);
