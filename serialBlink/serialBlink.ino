@@ -10,17 +10,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  if (Serial.available() > 0) { // check if there is anything in the serial buffer 
-    String command; // set 'command' to the variable
-    command = Serial.readString(); // set 'command' to the input of the user
+  if (Serial.available() > 0) { // check if there is anything in the serial buffer
+    String command; // set 'command'as a string variable
+    command = Serial.readString(); // set 'command' to the contents of the serial buffer
     if (command == "On") { // see if the user had typed "On"
       Serial.println("Turned on the light"); // print message in the separate line
-      digitalWrite(13, HIGH); // set LED to turn on 
+      digitalWrite(13, HIGH); // set LED to turn on
     }
     else if (command == "Off") { // see if the user had typed "Off"
       Serial.println("Turned off the light"); // print message in the separate line
-      digitalWrite(13, LOW); // set  LED to turn on
+      digitalWrite(13, LOW); // set  LED to turn off
     }
   }
-
 }
